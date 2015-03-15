@@ -6,3 +6,5 @@ Submitted - Oct 6, 2014
 (This project is my first attempt at the MEAN stack, especially node.js/ExpressJS and AngularJS)
 
 Live Demo - http://54.153.109.144/store
+
+Deployed on Amazon EC2

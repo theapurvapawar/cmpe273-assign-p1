@@ -1,0 +1,90 @@
+div#body(ng-controller='ProductController')
+	div.product-details(ng-repeat='product in products')
+		img(src="{{product.image_url}}" height = 300)
+		hr
+		div(ng-if="product.category == 'tv'")
+			div#name {{product.brand}} {{product.name}}
+		div(ng-if="product.category == 'car'")
+			div#name {{product.make}} {{product.name}} {{product.model}}
+		div(ng-if="product.category == 'fan'")
+			div#name {{product.name}}
+		div(ng-if="product.category == 'router'")
+			div#name {{product.brand}} {{product.name}}
+		div#price ${{product.price}}
+		hr
+		div(ng-if="product.startDate < date && (date < product.endDate || product.endDate == '')")
+			form(action="http://localhost:8080/order-mgmt/validate")
+				input(type="hidden" name="_id" value="{{product.product_id}}")
+				input#buyButton(type="submit" value="Buy now!")
+		div(ng-if="!(product.startDate < date && (date < product.endDate || product.endDate == ''))")
+			input#buyButton(type="button" value="Product Not Available!")
+		hr
+		div#descr-title Product Description
+		div#descr {{product.description}}
+		hr
+		div#spec Specifications for {{product.name}}
+		div#table(ng-if="product.category == 'tv'")
+			table(style='width: 100%')
+				tr
+					td Brand
+					td {{product.brand}}
+				tr
+					td Diagonal Length
+					td {{product.diagonal_length}}"
+				tr
+					td HD
+					td {{product.hd}}
+				tr
+					td Width * Height * Depth
+					td {{product.width}}" * {{product.height}}" * {{product.depth}}"
+				tr
+					td Warranty
+					td {{product.warranty}}
+		div#table(ng-if="product.category == 'car'")
+			table(style='width: 100%')
+				tr
+					td Make
+					td {{product.make}}
+				tr
+					td Model
+					td {{product.model}}
+				tr
+					td Year
+					td {{product.year}}
+				tr
+					td Mileage (miles)
+					td {{product.mileage}}
+				tr
+					td Condition
+					td {{product.condition}}
+		div#table(ng-if="product.category == 'router'")
+			table(style='width: 100%')
+				tr
+					td Brand
+					td {{product.brand}}
+				tr
+					td Range
+					td {{product.range}}
+				tr
+					td Dual Band
+					td {{product.dual_band}}
+				tr
+					td Number of Networks
+					td {{product.no_of_networks}}
+				tr
+					td Warranty
+					td {{product.warranty}}
+		div#table(ng-if="product.category == 'fan'")
+			table(style='width: 100%')
+				tr
+					td Type
+					td {{product.type}}
+				tr
+					td Number of Blades
+					td {{product.no_of_blades}}
+				tr
+					td Weight
+					td {{product.weight}}
+				tr
+					td Warranty
+					td {{product.warranty}}

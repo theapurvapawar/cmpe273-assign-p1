@@ -1,0 +1,12 @@
+doctype html
+html
+	include ./includes/head.jade
+	body
+		div#wrap(ng-app='ecommerce-app')
+			div#left-nav
+				include ./includes/navigation.jade
+			div#container
+				div#head
+					include ./includes/search.jade
+					include ./includes/store.jade
+		include ./includes/foot.jade

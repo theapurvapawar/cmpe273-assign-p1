@@ -1,0 +1,14 @@
+doctype html
+html
+	include ./includes/head.jade
+	body
+		div#wrap(ng-app='ecommerce-app')
+			div#left-nav
+				include ./includes/navigation.jade
+			div#container
+				div#head
+					include ./includes/search.jade
+					div#body
+						div#page-not-found Oops! I don't this page! Here, have 404 cookies instead.
+							img(src='/assets/images/cookies.jpg' height=300)
+		include ./includes/foot.jade

@@ -1,0 +1,14 @@
+div#body(ng-controller='StoreController')
+	div.product(ng-repeat='product in products')
+		a(href='{{product.product_url}}')
+			div(style="background-image: url('{{product.image_url}}')")
+				div.textContainer
+					div(ng-if="product.category == 'tv'")
+						p#name {{product.brand}} {{product.name}}
+					div(ng-if="product.category == 'car'")
+						p#name {{product.make}} {{product.name}} {{product.model}}
+					div(ng-if="product.category == 'fan'")
+						p#name {{product.name}}
+					div(ng-if="product.category == 'router'")
+						p#name {{product.brand}} {{product.name}}
+					p#price ${{product.price}}

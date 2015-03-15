@@ -1,0 +1,71 @@
+Using JSON files in this folder to fill initial data in mongodb using mongoimport. Below lines show the schema/structure for the different products.
+
+
+TV
+
+tv = {
+product_id:,
+category:,
+product_url:,
+image_url:,
+description:,
+price:,
+name:,
+brand:,
+diagonal_length:,
+hd:,
+depth:,
+width:,
+height:,
+warranty:
+}
+
+CAR
+
+car = {
+product_id:,
+category:,
+product_url:,
+image_url:,
+description:,
+price:,
+name:,
+make:,
+model:,
+year:,
+mileage:,
+condition:
+}
+
+WIRELESS ROUTER
+
+router = {
+product_id:,
+category:,
+product_url:,
+image_url:,
+description:,
+price:,
+name:,
+brand:,
+range:,
+dual-band:,
+no_of_networks:,
+warranty:
+}
+
+FANS 
+
+fan = {
+product_id:,
+category:,
+product_url:,
+image_url:,
+description:,
+price:,
+name:,
+type:,
+no_of_blades:,
+weight:,
+warranty:
+}

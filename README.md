@@ -8,3 +8,5 @@ Submitted - Oct 6, 2014
 Live Demo - http://54.153.109.144/store
 
 Deployed on Amazon EC2
+
+[Part 2] - https://github.com/theapurvapawar/cmpe273-assign-p2

@@ -10,6 +10,7 @@ Submitted - Oct 6, 2014
 - UI was not a part of the requiremt.
 
 Live Demo - http://54.153.109.144/store
+[Update] - Instance stopped as I'm being charged for it.
 
 Deployed on Amazon EC2
 
